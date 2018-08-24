@@ -34,6 +34,7 @@ ambil(){
 		echo -e $cyan"Shubuh   : $red$LozShubuh              $cyan Magrib           : $red$LozMaghrib"
 		echo -e $cyan"Dzuhur   : $red$LozDzuhur              $cyan Sepertiga Malam  : $red$Lozstm"
 		echo -e $cyan"Ashar    : $red$LozAshar              $cyan Duapertiga Malam : $red$Lozdtm"
+		echo -e $cyan"Isya     : $red$LozIsya"
 		
 	fi
 }
