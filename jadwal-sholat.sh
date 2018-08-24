@@ -19,14 +19,14 @@ ambil(){
 	if [[ $(cat result.lst) =~ "invalid address g88" ]]; then
 		echo "[!] Kota Salah ..."
 	else
-		LozShubuh=$(cat result.lst | grep -o '(?<="Fajr": ").*?(?=")')
-		LozDzuhur=$(cat result.lst | grep -o '(?<="Dhuhr": ").*?(?=")')
-		LozAshar=$(cat result.lst | grep -o '(?<="Fajr": ").*?(?=")')
-		LozMaghrib=$(cat result.lst | grep -o '(?<="Maghrib": ").*?(?=")')
-		LozIsya=$(cat result.lst | grep -o '(?<="Isha": ").*?(?=")')
-		Lozstm=$(cat result.lst | grep -o '(?<="SepertigaMalam": ").*?(?=")')
-		Loztm=$(cat result.lst | grep -o '(?<="TengahMalam": ").*?(?=")')
-		Lozdtm=$(cat result.lst | grep -o '(?<="DuapertigaMalam": ").*?(?=")')
+		LozShubuh=$(cat result.lst | grep -Po '(?<="Fajr": ").*?(?=")')
+		LozDzuhur=$(cat result.lst | grep -Po '(?<="Dhuhr": ").*?(?=")')
+		LozAshar=$(cat result.lst | grep -Po '(?<="Fajr": ").*?(?=")')
+		LozMaghrib=$(cat result.lst | grep -Po '(?<="Maghrib": ").*?(?=")')
+		LozIsya=$(cat result.lst | grep -Po '(?<="Isha": ").*?(?=")')
+		Lozstm=$(cat result.lst | grep -Po '(?<="SepertigaMalam": ").*?(?=")')
+		Loztm=$(cat result.lst | grep -Po '(?<="TengahMalam": ").*?(?=")')
+		Lozdtm=$(cat result.lst | grep -Po '(?<="DuapertigaMalam": ").*?(?=")')
 
 		echo -e $green"Tanggal  : $red`date`"
 		echo -e $green"Kota     : $red$kota"
